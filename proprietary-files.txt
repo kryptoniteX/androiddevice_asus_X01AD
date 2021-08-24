@@ -122,6 +122,10 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
+# Bluetooth (aptX) - from redfin RQ1A.210105.003
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
+
 # Bluetooth - from sunfish-user 11 RP1A.200720.011 6746289 release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2aa101db92b5d447604da82e80241ca1ff90e1e0
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|d5fcb9c2cf5538b9c946b9263b144e714433a578
@@ -2061,15 +2065,20 @@ vendor/lib/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
-# FM - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
-lib/fm_helium.so|feb4819f1898c67dfda4f965d7cc2711c74d1a99
-lib/libfm-hci.so|7700b02faa484ff682c618402f62b86bf8588db2
-lib64/fm_helium.so|bc9f6314528630c060b593cef4a8cec786b22467
-lib64/libfm-hci.so|589e9e290acfa18a49deba33606ed158d5e7f898
--product/lib/vendor.qti.hardware.fm@1.0.so|a090651122fcad265ae7562c88dca746f893ad36
--product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|5da074c88802633f64e2b9fe2013e2271f707e7b
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d27a7a6cea72a48739e741e749bff2e194d4510
+# FM
+lib/fm_helium.so
+lib/libfm-hci.so
+lib64/fm_helium.so
+lib64/libfm-hci.so
+product/lib/vendor.qti.hardware.fm@1.0.so
+product/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/bin/fm_qsoc_patches
+vendor/lib/ftm_fm_lib.so
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/ftm_fm_lib.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Factory
 product/framework/vendor.qti.hardware.factory-V1.0-java.jar
@@ -2412,7 +2421,9 @@ lib64/libqti-perfd-client_system.so
 lib64/libqti-util_system.so
 lib64/libqti_performance.so
 product/lib/vendor.qti.hardware.perf@1.0.so
+product/lib/vendor.qti.hardware.perf@2.0.so
 product/lib64/vendor.qti.hardware.perf@1.0.so
+product/lib64/vendor.qti.hardware.perf@2.0.so
 vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
 vendor/bin/msm_irqbalance
@@ -2429,6 +2440,7 @@ vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
+vendor/lib/vendor.qti.hardware.perf@2.0.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters-ns.so
@@ -2440,6 +2452,7 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/vendor.qti.hardware.perf@1.0.so
+vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Perf-IOP
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so

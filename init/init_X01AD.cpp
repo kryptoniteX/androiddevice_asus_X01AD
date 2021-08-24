@@ -105,10 +105,9 @@ void vendor_load_properties()
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
-	
-	   // RevengeOS Stuff
+       // RevengeOS Stuff
     property_override("org.revengeos.build_donate_url", "http://paypal.me/jartinup");
-    property_override("org.revengeos.build_maintainer", "Punit Raj Gautam - KryptoniteX");
+    property_override("org.revengeos.build_maintainer", "KryptoniteX");
     property_override("org.revengeos.build_support_url", "https://t.me/prg_X01AD");
-	
+   
 }

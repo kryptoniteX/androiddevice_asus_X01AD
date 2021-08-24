@@ -31,8 +31,6 @@ persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
 debug.sf.recomputecrop=0
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.max_virtual_display_dimension=4096
 
 #Disable Skip Validate
 sdm.debug.disable_skip_validate=1
@@ -43,10 +41,6 @@ vendor.display.enable_default_color_mode=1
 # Display Properties as per treble compliance
 vendor.gralloc.enable_fb_ubwc=1
 vendor.display.disable_skip_validate=1
-
-# Charger
-ro.charger.disable_init_blank=true
-ro.charger.enable_suspend=true
 
 #ro.hdmi.enable=true
 #
@@ -94,6 +88,9 @@ persist.timed.enable=true
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 
+# Display
+ro.sf.lcd_density=380
+
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
@@ -107,7 +104,7 @@ persist.fuse_sdcard=true
 ro.fm.transmitter=false
 
 #property to enable user to access Google WFD settings
-persist.debug.wfd.enable=0
+persist.debug.wfd.enable=1
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
 
@@ -179,7 +176,10 @@ ro.vendor.qti.va_aosp.support=1
 #expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
-persist.asus.led.on=1
+#set cutoff voltage to 3400mV
+ro.cutoff_voltage_mv=3400
 
 # BPF
 ro.kernel.ebpf.supported=true
+
+persist.asus.led.on=1

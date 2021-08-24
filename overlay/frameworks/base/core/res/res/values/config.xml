@@ -191,6 +191,11 @@
          phone object irrespective of this config -->
      <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
+    <!-- When true, the tethering upstream network follows the current default
+         Internet network (except when the current default network is mobile,
+         in which case a DUN network will be used if required). -->
+     <bool name="config_tether_upstream_automatic">true</bool>
+
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
      <bool name="config_unplugTurnsOnScreen">true</bool>
 
@@ -212,9 +217,6 @@
          flag is set for wifi displays.
     -->
      <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-     <bool name="config_wifi_dual_band_support">true</bool>
 
     <!-- Boolean indicating whether single radio chain scan results are to be used for network selection -->
      <bool name="config_wifi_framework_use_single_radio_chain_scan_results_network_selection">true</bool>
@@ -343,6 +345,8 @@
          Note that a physical cutout should be configured in pixels for the best results.
     -->
      <string name="config_mainBuiltInDisplayCutout">M 0,0 L -138, 0 L -119.0, 55 L 119.0, 55 L 138, 0 Z</string>
+
+     <dimen name="rounded_corner_radius_bottom">70px</dimen>
 
     <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->

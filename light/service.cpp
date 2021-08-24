@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.X01AD"
+#define LOG_TAG "android.hardware.light@2.0-service.asus_X01AD"
 
 #include <hidl/HidlTransportSupport.h>
 

@@ -1,3 +1,6 @@
+# Executables
+/system/bin/chargeonlymode			u:object_r:charger_exec:s0
+
 # Firmware
 /firmware                                                     u:object_r:firmware_file:s0
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
@@ -12,7 +15,9 @@
 /dev/fpsdev0		u:object_r:cdfinger_device2:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.X01AD                           u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.0-service\.widevine         u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey         u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.asus_X01AD                           u:object_r:hal_light_default_exec:s0
 
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                         u:object_r:idc_file:s0
@@ -26,3 +31,7 @@
 
 # Sys files
 /sys/class/power_supply(/.*)?                                      u:object_r:sysfs_battery_supply:s0
+/sys/devices(/platform)?/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?		u:object_r:sysfs_leds:s0
+/sys/devices(/platform)?/soc/leds-qpnp-[0-9]+/leds(/.*)?				u:object_r:sysfs_leds:s0
+/sys/devices(/platform)?/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/enable_dt2w		u:object_r:proc_touchpanel:s0
+/sys/devices(/platform)?/soc/78b7000\.i2c/i2c-3/3-[0-9a-f]+/disable_keys         u:object_r:proc_touchpanel:s0
