@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/asus/X01AD/device.mk)
 
 # Inherit some common RevengeOS stuff.
-$(call inherit-product, vendor/revengeosconfig/common_full_phone.mk)
+$(call inherit-product, vendor/revengeosconfig/common.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
@@ -30,6 +30,10 @@ IS_PHONE := true
 # Pixel customization
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+#RevengeOS Stuff
+REVENGEOS_BUILDTYPE := UNOFFICIAL
+REVENGEOS_MAINTAINER := KryptoniteX
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
